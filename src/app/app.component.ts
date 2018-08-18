@@ -18,59 +18,61 @@ export const ROOT_SELECTOR = 'app';
     './app.component.css'
   ],
   template: `
-    <nav>
-      <a [routerLink]=" ['./'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Index
-      </a>
-      <a [routerLink]=" ['./home'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Home
-      </a>
-      <a [routerLink]=" ['./detail'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Detail
-      </a>
-      <a [routerLink]=" ['./barrel'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Barrel
-      </a>
-      <a [routerLink]=" ['./about'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        About
-      </a>
-      <a *ngIf="showDevModule" [routerLink]=" ['./dev-module'] "
-         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        DevModule
-      </a>
-    </nav>
+  <div style="height: 100vh;"> 
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyName" routerLink="/">
+      <span>Roller Derby Manager</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="/accueil">Accueil</a>
+      <a mat-button routerLink="/equipes">Equipes</a>
+      <a mat-button routerLink="/contact">Aide et contact</a>
+    </div>
+    <span class="login"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <button mat-stroked-button>Se connecter</button>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <a mat-button routerLink="/accueil">Accueil</a>
+        <a mat-button routerLink="/equipes">Equipes</a>
+        <a mat-button routerLink="/contact">Aide et contact</a>
+        <a mat-button routerLink="/equipes">se connecter</a>      
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>
 
     <main>
       <router-outlet></router-outlet>
     </main>
 
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
     <footer>
-      <span>Angular Starter by <a [href]="twitter">@gdi2290</a></span>
-      <div>
-        <a [href]="url">
-          <img [src]="tipe" width="25%">
-        </a>
-      </div>
+      <p>A propos de Roller Derby Manager</p>
+      <span>copyright by Sangle au cou</span>
+      <span>Roller Derby Manager by Sangle au cou<a [href]="facebook"> https://www.facebook.com/Le.Darch</a></span>
     </footer>
   `
 })
 export class AppComponent implements OnInit {
-  public name = 'Angular Starter';
-  public tipe = 'assets/img/tipe.png';
-  public twitter = 'https://twitter.com/gdi2290';
-  public url = 'https://tipe.io';
-  public showDevModule: boolean = environment.showDevModule;
+  public name = 'Roller derby manager';
+  //public tipe = 'assets/img/tipe.png';
+  //public twitter = 'https://twitter.com/gdi2290';
+  // public url = 'https://tipe.io';
+  //public showDevModule: boolean = environment.showDevModule;
 
   constructor(
     public appState: AppState
-  ) {}
+  ) { }
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);

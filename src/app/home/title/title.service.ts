@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class Title {
 
-  public value = 'Angular 2';
+  public value = 'Roller derby manager';
 
   constructor(
     public http: HttpClient

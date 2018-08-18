@@ -1,21 +1,15 @@
 <div>
-  <h1 x-large class="sample-content">Gérez votre équipe de roller derby grâce à Roller derby manager</h1>
+  <h1>Recherchez une équipe inscrite sur Roller derby manager</h1>
 
-  <hr>
-
-  <div>
-    For hot module reloading run
-    <pre>npm run start:hmr</pre>
-  </div>
-
-  <hr>
 
   <div>
-    <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
+
+    <form (ngSubmit)="submitState(localState.value)" autocomplete="on">
+
       <input [value]="localState.value" (input)="localState.value = $event.target.value" placeholder="Submit Local State to App State"
         autofocus>
 
-      <button>Rechercher</button>
+      <button>Submit Value</button>
 
     </form>
     <!--
@@ -24,6 +18,9 @@
         we can use Angular's [(ngModel)] syntax
         <input type="text" name="textInput" [(ngModel)]="localState.value" autofocus>
       -->
+
+    <pre>this.localState = {{ localState | json }}</pre>
+
   </div>
 
 </div>
