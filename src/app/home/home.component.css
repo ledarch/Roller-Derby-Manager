@@ -1,1 +1,97 @@
 /*styles for home content only*/
+
+.bg {
+    background: url("../../assets/img/homepage.jpg")no-repeat center;
+    background-size: cover; 
+    opacity: 0.9;
+    width: 100%;
+    height: 100vh;
+    /*position: absolute;
+    z-index: 2;*/
+}
+
+.title {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 50px;
+    margin-bottom: 70px;
+    font-size: 110%;
+    width: 100%;
+    text-align: center;
+}
+.home>p {
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.bg>h1 { 
+    font-size: 140%;
+    color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.div_homepage{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.btn_create {
+    width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn_create {
+        width: 100%;
+    }
+}
+
+.dl_app_google {
+    margin-right: 40px;
+}
+
+.img_content {
+    width: 100%;
+}
+
+/*######### DIV EXPLICATIONS #########*/
+mat-grid-list {
+    height: auto;
+}
+.my-grid-tile {
+    width: 100%;
+}
+.my-grid-tile:nth-child(odd)   {
+    background-color: #e0e0e0;
+}
+
+.section_title {
+    font-size: 26px;
+    align-content: center !important;
+} 
+
+mat-grid-tile {
+    height: auto;
+    text-align: center;
+    font-size: 16px;
+}
+.card {
+    display:block; 
+    margin:50px; 
+    text-align: center;
+}
+
+
+.section_p {  
+    text-align: justify;
+ }
+
+
+
+
+
+
+

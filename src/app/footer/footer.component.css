@@ -1,0 +1,33 @@
+
+footer { 
+    font-size: 18px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
+    height: auto;
+    width: auto;
+    text-align: center; 
+    background: linear-gradient(#be4676, #c2185b);
+    border-top: 1px solid #be4676;
+    } 
+        /*
+  footer span {
+    margin : 15px;
+  }  
+
+  footer img, i {
+  margin-left: 15px;
+  vertical-align:middle;
+  }
+  
+  */
+ 
+  .div_dl, .dl_app, .contact{
+    width: 100%;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .dl_app, .contact{
+    margin-top:20px;
+  }

@@ -5,15 +5,25 @@ import {
   MatToolbarModule,
   MatSidenavModule,
   MatIconModule,
-  // and so on...
+  MatTooltipModule,
+  MatInputModule,
+  MatAutocompleteModule,
+  MatGridListModule,
+  MatDialogModule,
+
 } from "@angular/material";
 
-const MAT_MODULES  = [
+const MAT_MODULES = [
   MatButtonModule,
   MatToolbarModule,
   MatSidenavModule,
   MatIconModule,
-  // and so on...
+  MatTooltipModule,
+  MatInputModule,
+  MatAutocompleteModule,
+  MatGridListModule,
+  MatDialogModule,
+
 ];
 
 @NgModule({

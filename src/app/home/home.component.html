@@ -1,29 +1,134 @@
-<div>
-  <h1 x-large class="sample-content">Gérez votre équipe de roller derby grâce à Roller derby manager</h1>
-
-  <hr>
-
-  <div>
-    For hot module reloading run
-    <pre>npm run start:hmr</pre>
+<div class="bg">
+  <div class="title">
+    {{title.title}}
   </div>
-
-  <hr>
-
-  <div>
-    <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
-      <input [value]="localState.value" (input)="localState.value = $event.target.value" placeholder="Submit Local State to App State"
-        autofocus>
-
-      <button>Rechercher</button>
-
-    </form>
-    <!--
-        <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
-        Rather than wiring up two-way data-binding ourselves with [value] and (input)
-        we can use Angular's [(ngModel)] syntax
-        <input type="text" name="textInput" [(ngModel)]="localState.value" autofocus>
-      -->
+  <div class="home">
+    <p>Grâce à Roller derby manager tu peux enfin gérer en tout simplicité ton équipe !</p>
+    <p>Créez votre compte puis votre club ou alors rejoignez une équipe déjà existente</p>
+    <div class="div_homepage">
+      <button mat-raised-button class="btn_create" color="primary">CRÉER TON COMPTE</button>
+    </div>
+    <div class="div_homepage">
+      <button mat-raised-button class="btn_create" color="primary">CRÉER TON ÉQUIPE</button>
+    </div>
+    <p>N'hésitez surtout pas à télécharger l'application mobile</p>
+    <div class="div_homepage">
+      <a [href]="" class="dl_app_google"><img [src]="googleplay"></a>
+      <a [href]=""><img [src]="appstore"></a>
+    </div>
   </div>
+</div>
 
+
+<div class="my-grid-tile">
+  <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
+    <mat-grid-tile-header class="section_title">Comment fonctionne Roller derby manager?</mat-grid-tile-header>
+    <mat-grid-tile>
+      <div class="card">
+        <button mat-fab>
+          <img src="../../assets/icon/settings.png" alt="create your account">
+        </button>
+        <h3>Configurez</h3>
+        <p class="section_p">
+          Créez votre compte sur Roller derby manager et renseignez les différentes informations requises avant de pouvoir débuter
+          l'expérience.
+        </p>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="card">
+        <button mat-fab>
+          <img src="../../assets/icon/research.png" alt="research team">
+        </button>
+        <h3>Rejoignez</h3>
+        <p class="section_p">
+          Recherchez votre équipe et faîtes la demande pour l'intégrer ou saississez le code fournit par le responsable d'équipe.
+        </p>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="card">
+        <button mat-fab>
+          <img src="../../assets/icon/navigation.png" alt="navigate">
+        </button>
+        <h3>Naviguez</h3>
+        <p class="section_p">
+          Désormais vous pouvez accéder aux calendriers de l'équipe, renseigner votre présence sur les différents évènements, voir
+          le récapitulatif des présences ou bien encore visualiser les fichiers statistiques ou stratégiques.
+        </p>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="card">
+        <button mat-fab>
+          <img src="../../assets/icon/file.png" alt="search files">
+        </button>
+        <h3>Fichiers</h3>
+        <p class="section_p">
+          Retrouvez tout les fichiers mis à disposition par votre club, fichiers statistiques des, playbook...
+        </p>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+
+
+
+
+<div class="my-grid-tile">
+  <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
+    <mat-grid-tile-header class="section_title">Vous souhaitez créer votre club?</mat-grid-tile-header>
+    <mat-grid-tile>
+      <div class="card">
+        <button mat-fab>
+          <img src="../../assets/icon/settings.png" alt="create account and club">
+        </button>
+        <h3>Configurez</h3>
+        <p class="section_p">
+          Créez votre compte sur Roller derby manager et précisez être le responsable du club puis saississez les informations nécessaire.
+        </p>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="card">
+        <button mat-fab>
+          <img src="../../assets/icon/message.png" alt="invite your friends">
+        </button>
+        <h3>Invitez</h3>
+        <p class="section_p">
+          Ne tardez plus et envoyez le code permettant à vos joueurs de rejoindre l'équipe !
+        </p>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="card">
+        <button mat-fab>
+          <img src="../../assets/icon/manage.png" alt="manage your club">
+        </button>
+        <h3>Gestion</h3>
+        <p class="section_p">
+          Dès à présent vous pouvez gérer vos effectifs, créer des événements et programmer les rappels de présence, stockez des fichiers.
+        </p>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="card">
+        <button mat-fab>
+          <img src="../../assets/icon/archive.png" alt="archive files">
+        </button>
+        <h3>Stockez</h3>
+        <p class="section_p">
+          Afin de tout regroupez sur la même plate-forme et permettre de retrouvez facilement vos fichiers ! Archivage illimité des
+          stats de chaque saison, des guides de stratégie ou tout autres documents.
+        </p>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

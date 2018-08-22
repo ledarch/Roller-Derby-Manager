@@ -1,0 +1,29 @@
+<!--Navbar-->
+<div class="header">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="openDialog()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+
+      <a mat-button class="companyName" routerLink="/">
+        <span>Roller Derby Manager</span>
+      </a>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a mat-button routerLink="/accueil">Accueil</a>
+        <a mat-button routerLink="/equipes">Equipes</a>
+        <a mat-button routerLink="/contact">Aide et contact</a>
+      </div>
+      <span class="login"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <button mat-stroked-button>Se connecter</button>
+      </div>
+
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+</div>
+<!--/.Navbar -->

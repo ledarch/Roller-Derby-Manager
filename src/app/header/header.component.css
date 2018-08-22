@@ -1,0 +1,30 @@
+.header {
+    font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    width: 100%;
+}  
+
+.companyName{
+    text-transform: uppercase;
+    font-size: 95%;
+}
+
+@media only screen and (max-width: 600px) {
+    .companyName{
+        font-size: 90%;
+    }
+}
+
+a{
+    text-decoration: none;
+    font-size: 14px;
+    white-space: normal;
+}
+
+button{
+    font-size: 80%;
+    min-width: min-content;
+}
+
+.login {
+    flex: 1 1 auto;
+}

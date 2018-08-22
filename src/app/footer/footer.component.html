@@ -1,0 +1,27 @@
+<footer>
+    <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
+        <mat-grid-tile>
+            <div>
+                <div class="div_dl">À propos de Roller Derby Manager</div>
+                <div class="dl_app">
+                    <a [href]="" style="margin-right: 10px;"><img [src]="googleplay"></a>
+                    <a [href]=""><img [src]="appstore"></a>
+                </div>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <span>Copyright © 2018 - Sangle au cou SAS</span>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div>
+                <div>Contact</div>
+                <div class="contact">
+                    <i class="material-icons icon_contact" matTooltip="06.86.31.56.64" aria-label="logo phone number that displays a tooltip when focused or hovered over"
+                        style="margin-right: 10px;">phone</i>
+                    <i class="material-icons icon_contact" style="margin-right: 10px;">alternate_email</i>
+                    <a [href]="facebook" class="icon_contact"><img [src]="logo"></a>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</footer>

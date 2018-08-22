@@ -13,12 +13,11 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
  * Load the implementations that should be tested.
  */
 import { AppState } from '../app.service';
-import { HomeComponent } from './home.component';
-import { Title } from './title';
+import { ListTeamComponent } from './list_team.component';
 
-describe(`Home`, () => {
-  let comp: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe(`Team`, () => {
+  let comp: ListTeamComponent;
+  let fixture: ComponentFixture<ListTeamComponent>;
   let injector: TestBed;
   let service: AppState;
   let httpMock: HttpTestingController;
@@ -28,10 +27,10 @@ describe(`Home`, () => {
    */
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent],
+      declarations: [ListTeamComponent],
       schemas: [NO_ERRORS_SCHEMA],
       imports: [HttpClientTestingModule],
-      providers: [AppState, Title]
+      providers: [AppState]
     })
 
       /**
@@ -47,7 +46,7 @@ describe(`Home`, () => {
    * Synchronous beforeEach.
    */
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(ListTeamComponent);
     comp = fixture.componentInstance;
 
     /**
@@ -55,10 +54,11 @@ describe(`Home`, () => {
      */
     fixture.detectChanges();
   });
-
-  it('should have a title', () => {
-    expect(!!comp.title).toEqual(true);
+  /** 
+  it('should have default data', () => {
+    expect(comp.localState).toEqual({ value: '' });
   });
+  */
 
   it('should log ngOnInit', () => {
     spyOn(console, 'log');

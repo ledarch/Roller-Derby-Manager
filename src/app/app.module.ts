@@ -19,10 +19,14 @@ import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { XLargeDirective } from './home/x-large';
 import { DevModuleModule } from './+dev-module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ListTeamComponent } from './list_team/list_team.component';
+import { CreateTeamComponent } from './create_team/create_team.component';
+import { NavDialogRespOpenComponent } from './header/header.component';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
-import { TeamComponent } from './team';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -43,10 +47,16 @@ interface StoreType {
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
+    HeaderComponent,
+    FooterComponent,
     HomeComponent,
     XLargeDirective,
-    TeamComponent
+    ListTeamComponent,
+    CreateTeamComponent,
+    NavDialogRespOpenComponent,
   ],
+  entryComponents: [NavDialogRespOpenComponent],
+
   /**
    * Import Angular's modules.
    */
@@ -69,6 +79,7 @@ interface StoreType {
      */
     ...environment.showDevModule ? [DevModuleModule] : [],
   ],
+
   /**
    * Expose our Services and Providers into Angular's dependency injection.
    */

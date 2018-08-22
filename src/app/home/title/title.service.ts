@@ -4,15 +4,9 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class Title {
 
-  public value = 'Roller derby manager';
+  public title = 'Améliore la gestion de ton club et de ton équipe de roller derby';
 
   constructor(
     public http: HttpClient
   ) { }
-
-  public getData() {
-    console.log('Title#getData(): Get Data');
-    return this.http.get('/assets/data.json');
-  }
-
 }
