@@ -53,37 +53,26 @@
     margin-right: 40px;
 }
 
-.img_content {
-    width: 100%;
-}
 
 /*######### DIV EXPLICATIONS #########*/
-mat-grid-list {
-    height: auto;
-}
-.my-grid-tile {
-    width: 100%;
-}
-.my-grid-tile:nth-child(odd)   {
+
+.section:nth-child(odd)   {
     background-color: #e0e0e0;
 }
 
 .section_title {
     font-size: 26px;
-    align-content: center !important;
 } 
 
-mat-grid-tile {
-    height: auto;
-    text-align: center;
-    font-size: 16px;
-}
-.card {
-    display:block; 
-    margin:50px; 
-    text-align: center;
+::ng-deep mat-grid-tile.mat-grid-tile .mat-figure {
+    align-items: initial;  /*vertical alignment*/
 }
 
+.card{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 .section_p {  
     text-align: justify;

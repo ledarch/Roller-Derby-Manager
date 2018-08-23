@@ -20,10 +20,10 @@
 </div>
 
 
-<div class="my-grid-tile">
+<div class="section">
   <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
     <mat-grid-tile-header class="section_title">Comment fonctionne Roller derby manager?</mat-grid-tile-header>
-    <mat-grid-tile>
+    <mat-grid-tile class="my-grid-tile">
       <div class="card">
         <button mat-fab>
           <img src="../../assets/icon/settings.png" alt="create your account">
@@ -36,7 +36,7 @@
       </div>
     </mat-grid-tile>
 
-    <mat-grid-tile>
+    <mat-grid-tile class="my-grid-tile">
       <div class="card">
         <button mat-fab>
           <img src="../../assets/icon/research.png" alt="research team">
@@ -48,27 +48,27 @@
       </div>
     </mat-grid-tile>
 
-    <mat-grid-tile>
+    <mat-grid-tile class="my-grid-tile">
       <div class="card">
         <button mat-fab>
           <img src="../../assets/icon/navigation.png" alt="navigate">
         </button>
         <h3>Naviguez</h3>
         <p class="section_p">
-          Désormais vous pouvez accéder aux calendriers de l'équipe, renseigner votre présence sur les différents évènements, voir
-          le récapitulatif des présences ou bien encore visualiser les fichiers statistiques ou stratégiques.
+          Accéder aux calendriers de l'équipe, renseigner votre présence sur les différents évènements, visualiser les fichiers statistiques,
+          le playbook...
         </p>
       </div>
     </mat-grid-tile>
 
-    <mat-grid-tile>
+    <mat-grid-tile class="my-grid-tile">
       <div class="card">
         <button mat-fab>
           <img src="../../assets/icon/file.png" alt="search files">
         </button>
         <h3>Fichiers</h3>
         <p class="section_p">
-          Retrouvez tout les fichiers mis à disposition par votre club, fichiers statistiques des, playbook...
+          Retrouvez tous les fichiers mis à disposition par votre club, fichiers statistiques, playbook...
         </p>
       </div>
     </mat-grid-tile>
@@ -79,22 +79,22 @@
 
 
 
-<div class="my-grid-tile">
+<div class="section">
   <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
     <mat-grid-tile-header class="section_title">Vous souhaitez créer votre club?</mat-grid-tile-header>
-    <mat-grid-tile>
+    <mat-grid-tile class="my-grid-tile">
       <div class="card">
         <button mat-fab>
           <img src="../../assets/icon/settings.png" alt="create account and club">
         </button>
         <h3>Configurez</h3>
         <p class="section_p">
-          Créez votre compte sur Roller derby manager et précisez être le responsable du club puis saississez les informations nécessaire.
+          Créez votre compte sur Roller derby manager et précisez être responsable du club puis saississez les informations nécessaire.
         </p>
       </div>
     </mat-grid-tile>
 
-    <mat-grid-tile>
+    <mat-grid-tile class="my-grid-tile">
       <div class="card">
         <button mat-fab>
           <img src="../../assets/icon/message.png" alt="invite your friends">
@@ -106,7 +106,7 @@
       </div>
     </mat-grid-tile>
 
-    <mat-grid-tile>
+    <mat-grid-tile class="my-grid-tile">
       <div class="card">
         <button mat-fab>
           <img src="../../assets/icon/manage.png" alt="manage your club">
@@ -118,15 +118,15 @@
       </div>
     </mat-grid-tile>
 
-    <mat-grid-tile>
+    <mat-grid-tile class="my-grid-tile">
       <div class="card">
         <button mat-fab>
           <img src="../../assets/icon/archive.png" alt="archive files">
         </button>
         <h3>Stockez</h3>
         <p class="section_p">
-          Afin de tout regroupez sur la même plate-forme et permettre de retrouvez facilement vos fichiers ! Archivage illimité des
-          stats de chaque saison, des guides de stratégie ou tout autres documents.
+          Regroupez et retrouvez facilement vos fichiers ! Archivage illimité des stats de chaque saison, des guides de stratégie ou
+          tout autres documents.
         </p>
       </div>
     </mat-grid-tile>
