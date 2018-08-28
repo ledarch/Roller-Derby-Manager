@@ -18,28 +18,28 @@ export class TeamService {
   constructor(private http: HttpClient) { }
 
 
-  public getProduits(): Observable<any> {
+  public getTeams(): Observable<any> {
     return this.http.get(this.produitUrl + '/listeprod');
   }
 
-  get(idProduit: string) {
-    return this.http.get(this.PRODUIT_API + '/' + idProduit);
+  get(idTeam: string) {
+    return this.http.get(this.PRODUIT_API + '/' + idTeam);
   }
 
-  deleteProduit(href: string) {
+  deleteTeam(href: string) {
     return this.http.delete(href);
   }
-  save(produit: any): Observable<any> {
+  save(team: any): Observable<any> {
     let result: Observable<Object>;
-    if (produit['href']) {
-      result = this.http.put(produit.href, produit);
+    if (team['href']) {
+      result = this.http.put(team.href, team);
     } else {
-      result = this.http.post(this.PRODUIT_API, produit);
+      result = this.http.post(this.PRODUIT_API, team);
     }
     return result;
   }
 
-  createProduit(team: Team): Observable<Team> {
+  createTeam(team: Team): Observable<Team> {
     return this.http.post<Team>(this.PRODUIT_API, team, httpOptions)
       .pipe(
         catchError(this.handleError)

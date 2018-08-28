@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { AuthService } from './../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ export class HeaderComponent implements OnInit {
   public googleplay = 'assets/img/dl_app_googleplay.jpg';
   public appstore = 'assets/img/dl_app_appstore.jpg';
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, public auth: AuthService) {
+    auth.handleAuthentication();
   }
 
   ngOnInit() {
@@ -38,7 +40,7 @@ export class NavDialogRespOpenComponent {
 
   constructor(
     public dialogRef: MatDialogRef<NavDialogRespOpenComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+    @Inject(MAT_DIALOG_DATA) public data: any, public auth: AuthService) { }
 
   onNoClick(): void {
     this.dialogRef.close();

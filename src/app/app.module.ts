@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyMaterialModule } from './MyMaterialModule';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import 'hammerjs';
 /*
  * Platform and Environment providers/directives/pipes
@@ -24,6 +25,11 @@ import { FooterComponent } from './footer/footer.component';
 import { ListTeamComponent } from './list_team/list_team.component';
 import { CreateTeamComponent } from './create_team/create_team.component';
 import { NavDialogRespOpenComponent } from './header/header.component';
+import { CallbackComponent } from './callback/callback.component';
+
+
+import { AuthService } from './auth/auth.service';
+import { TeamService } from './team/team.service';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -54,6 +60,7 @@ interface StoreType {
     ListTeamComponent,
     CreateTeamComponent,
     NavDialogRespOpenComponent,
+    CallbackComponent
   ],
   entryComponents: [NavDialogRespOpenComponent],
 
@@ -67,6 +74,8 @@ interface StoreType {
     HttpClientModule,
     MyMaterialModule,
     FlexLayoutModule,
+    NgxMatSelectSearchModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules
@@ -85,7 +94,9 @@ interface StoreType {
    */
   providers: [
     environment.ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    TeamService,
+    AuthService
   ]
 })
 export class AppModule { }

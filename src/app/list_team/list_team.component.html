@@ -1,45 +1,84 @@
-<h1>Espace administration</h1>
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col s6">
-      <h2>Gestion des produits</h2>
-      <ul>
-        <li class="nav-item">
-          <a routerLink="/listeprod">Liste des produits</a></li>
-        <li class="nav-item"><a routerLink="/addprod">Créer un produit</a></li>
-      </ul>
-    </div>
-    <div class="col s6">
-      <h2>Gestion des commandes</h2>
-      <ul>
-        <li class="nav-item">
-          <a routerLink="/listecmd"> Liste des commandes</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+<h3>Recherchez votre équipe sur Roller derby manager</h3>
+<mat-form-field class="searchbar">
+  <mat-select [formControl]="teamCtrl" placeholder="Equipe" #singleSelect>
+    <ngx-mat-select-search [formControl]="teamFilterCtrl" [placeholderLabel]="'Find team...'"></ngx-mat-select-search>
+    <mat-option *ngFor="let team of filteredTeams | async" [value]="team">
+      {{team.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div class="section_cards" fxLayout="row" fxLayout.lt-sm="column">
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>DCCLM</mat-card-title>
+      <mat-card-subtitle>Kamiquadz</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/img/couv_kami.jpg" alt="Photo of kamiquadz">
+    <mat-card-content>
+      <p>
+        Équipe masculine montpellieraine de roller derby
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>JOIN</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>DCCLM</mat-card-title>
+      <mat-card-subtitle>DCCLM A</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/img/couv_kami.jpg" alt="Photo of kamiquadz">
+    <mat-card-content>
+      <p>
+        Équipe masculine montpellieraine de roller derby
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>JOIN</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>DCCLM</mat-card-title>
+      <mat-card-subtitle>DCCLM B</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/img/couv_kami.jpg" alt="Photo of kamiquadz">
+    <mat-card-content>
+      <p>
+        Équipe masculine montpellieraine de roller derby
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>JOIN</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>DCCLM</mat-card-title>
+      <mat-card-subtitle>Kamiquadz</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/img/couv_kami.jpg" alt="Photo of kamiquadz">
+    <mat-card-content>
+      <p>
+        Équipe masculine montpellieraine de roller derby
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>JOIN</button>
+    </mat-card-actions>
+  </mat-card>
+
 </div>
 
-<h1>Espace administration</h1>
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col s6">
-      <h2>Gestion des produits</h2>
-      <ul>
-        <li class="nav-item">
-          <a routerLink="/listeprod">Liste des produits</a></li>
-        <li class="nav-item"><a routerLink="/addprod">Créer un produit</a></li>
-      </ul>
-    </div>
-    <div class="col s6">
-      <h2>Gestion des commandes</h2>
-      <ul>
-        <li class="nav-item">
-          <a routerLink="/listecmd"> Liste des commandes</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+<mat-paginator [length]="50" [pageSize]="8" [pageSizeOptions]="[4, 8, 12, 24]">
+</mat-paginator>

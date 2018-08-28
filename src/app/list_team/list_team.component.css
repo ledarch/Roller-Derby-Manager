@@ -1,1 +1,18 @@
 /*styles for home content only*/
+
+h3 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.example-header-image {
+    background-image: url('../../assets/img/logo_dcclm.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: unset;
+}
+
+.searchbar {
+    background-color: #424242;
+    width: 100%;
+}

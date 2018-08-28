@@ -19,9 +19,11 @@
       </div>
       <span class="login"></span>
       <div fxShow="true" fxHide.lt-md="true">
-        <button mat-stroked-button>Se connecter</button>
+        <button mat-stroked-button *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Se connecter</button>
       </div>
-
+      <div fxShow="true" fxHide.lt-md="true">
+        <button mat-stroked-button *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Se déconnecter</button>
+      </div>
     </mat-toolbar-row>
 
   </mat-toolbar>

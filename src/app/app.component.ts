@@ -3,7 +3,7 @@
  */
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { environment } from 'environments/environment';
-import { AppState } from './app.service';
+import { AuthService } from './auth/auth.service';
 
 export const ROOT_SELECTOR = 'app';
 
@@ -21,12 +21,11 @@ export const ROOT_SELECTOR = 'app';
 })
 export class AppComponent implements OnInit {
 
-  constructor(
-    public appState: AppState
-  ) { }
+  constructor(public auth: AuthService) {
+    auth.handleAuthentication();
+  }
 
   public ngOnInit() {
-    console.log('Initial App State', this.appState.state);
   }
 
 }

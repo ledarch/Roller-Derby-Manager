@@ -1,11 +1,7 @@
 export class Team {
-    idProduit: number;
-    date_de_parution: Date;
+    idTeam: number;
+    name: string;
     description: string;
-    interprete: string;
-    nom: string;
     logo: string;
-    prix: string;
-    stock: number;
-    type: string;
+    cover: string;
 }

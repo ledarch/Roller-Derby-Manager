@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
   MatToolbarModule,
+  MatListModule,
   MatSidenavModule,
   MatIconModule,
   MatTooltipModule,
@@ -10,12 +11,17 @@ import {
   MatAutocompleteModule,
   MatGridListModule,
   MatDialogModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatPaginatorModule
 
 } from "@angular/material";
 
 const MAT_MODULES = [
   MatButtonModule,
   MatToolbarModule,
+  MatListModule,
   MatSidenavModule,
   MatIconModule,
   MatTooltipModule,
@@ -23,7 +29,10 @@ const MAT_MODULES = [
   MatAutocompleteModule,
   MatGridListModule,
   MatDialogModule,
-
+  MatCardModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatPaginatorModule
 ];
 
 @NgModule({
